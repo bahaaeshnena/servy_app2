@@ -27,7 +27,7 @@ class SplshScreen extends StatelessWidget {
                       topLeft: Radius.circular(61),
                       topRight: Radius.circular(63),
                     ),
-                    color: KPrimaryColorGreen,
+                    color: kPrimaryColorGreen,
                   ),
                   width: 120,
                   height: 120,
@@ -47,23 +47,23 @@ class SplshScreen extends StatelessWidget {
                     Text(
                       "Discover a new world\n",
                       style: TextStyle(
-                          fontSize: 22,
+                          fontSize: 26,
                           fontWeight: FontWeight.w900,
-                          fontFamily: 'Simonetta\n'),
+                          fontFamily: 'Montserrat-SemiBold\n'),
                     ),
                     Text(
                       "possibilities and innovation!\n",
                       style: TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.w900,
-                          fontFamily: 'Simonetta'),
+                          fontFamily: 'Arvo-Regular'),
                     ),
                     Text(
                       "Join the app for a unique experience",
                       style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w900,
-                          fontFamily: 'Simonetta'),
+                          fontFamily: 'Arvo-Regular'),
                     ),
                   ],
                 ),
@@ -92,7 +92,7 @@ class SplshScreen extends StatelessWidget {
               right: 44,
               child: Container(
                 decoration: BoxDecoration(
-                    color: KPrimaryColorGreen,
+                    color: kPrimaryColorGreen,
                     borderRadius: BorderRadius.circular(33)),
                 width: 30,
                 height: 30,

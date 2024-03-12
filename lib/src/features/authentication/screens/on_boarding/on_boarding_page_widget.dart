@@ -27,8 +27,11 @@ class OnBoardingPageWidget extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.w900,
-                  fontFamily: 'Poppins',
+                  fontFamily: 'Montserrat-SemiBold',
                 ),
+              ),
+              SizedBox(
+                height: 10,
               ),
               Text(
                 model.subTitle,
@@ -36,14 +39,15 @@ class OnBoardingPageWidget extends StatelessWidget {
                 style: const TextStyle(
                   fontFamily: 'Poppins',
                   color: Colors.black38,
-                  fontSize: 18,
+                  fontSize: 17,
                 ),
               ),
             ],
           ),
           Text(
             model.counterText,
-            style: const TextStyle(fontFamily: 'Outfit', fontSize: 25),
+            style:
+                const TextStyle(fontFamily: 'ReadexPro-Regular', fontSize: 25),
           ),
           const SizedBox(
             height: 80,

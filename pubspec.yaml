@@ -82,15 +82,38 @@ flutter:
     - family: Simonetta
       fonts:
         - asset: assets/fonts/Simonetta_font/Simonetta-Black.ttf
+
     - family: Inter
       fonts:
         - asset: assets/fonts/inter_font/Inter-Bold.ttf
+
     - family: Poppins
       fonts:
         - asset: assets/fonts/Poppins_font/Poppins-SemiBold.ttf
+
     - family: Outfit
       fonts:
         - asset: assets/fonts/Outfit_font/Outfit-Medium.ttf
+
+    - family: Montserrat-Regular
+      fonts:
+        - asset: assets/fonts/Montserrat_font/Montserrat-Regular.ttf
+
+    - family: Montserrat-SemiBold
+      fonts:
+        - asset: assets/fonts/Montserrat_font/Montserrat-SemiBold.ttf
+
+    - family: Montserrat-ExtraLight
+      fonts:
+        - asset: assets/fonts/Montserrat_font/Montserrat-ExtraLight.ttf
+
+    - family: ReadexPro-Regular
+      fonts:
+        - asset: assets/fonts/Readex_Pro_font/ReadexPro-Regular.ttf
+
+    - family: Arvo-Regular
+      fonts:
+        - asset: assets/fonts/Arvo_font/Arvo-Regular.ttf
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
