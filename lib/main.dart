@@ -13,6 +13,7 @@ class Servy_app extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: TApptheme.lightTheme,
       darkTheme: TApptheme.darkTheme,
       themeMode: ThemeMode.light,
