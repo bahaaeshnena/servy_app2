@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:servy_app2/src/constants/image_string.dart';
-import 'package:servy_app2/src/constants/text.dart';
+
 import 'package:servy_app2/src/features/authentication/models/model_on_boarding.dart';
 
 class OnBoardingPageWidget extends StatelessWidget {
@@ -13,13 +12,14 @@ class OnBoardingPageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Container(
       padding: const EdgeInsets.all(12),
       color: model.bgColor,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Image.asset(model.image, height: model.height * 0.5),
+          Image.asset(model.image, height: size.height * 0.4),
           Column(
             children: [
               Text(
@@ -43,10 +43,10 @@ class OnBoardingPageWidget extends StatelessWidget {
           ),
           Text(
             model.counterText,
-            style: TextStyle(fontFamily: 'Outfit', fontSize: 25),
+            style: const TextStyle(fontFamily: 'Outfit', fontSize: 25),
           ),
           const SizedBox(
-            height: 50,
+            height: 80,
           )
         ],
       ),

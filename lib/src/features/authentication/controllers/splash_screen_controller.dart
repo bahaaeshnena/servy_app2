@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
 import 'package:servy_app2/src/features/authentication/screens/on_boarding/on_boarding_screen.dart';
-import 'package:servy_app2/src/features/authentication/screens/welcome.dart';
 
 class SplashScreenController extends GetxController {
   static SplashScreenController get find => Get.find();
@@ -13,6 +12,6 @@ class SplashScreenController extends GetxController {
 
     await Future.delayed(const Duration(milliseconds: 5000));
 
-    Get.to(const OnBoardingScreen());
+    Get.to(OnBoardingScreen());
   }
 }

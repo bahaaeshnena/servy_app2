@@ -1,63 +1,80 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:servy_app2/src/constants/colors.dart';
 import 'package:servy_app2/src/constants/image_string.dart';
 import 'package:servy_app2/src/constants/text.dart';
+import 'package:servy_app2/src/features/authentication/controllers/on_boarding_controller.dart';
 import 'package:servy_app2/src/features/authentication/models/model_on_boarding.dart';
 import 'package:servy_app2/src/features/authentication/screens/on_boarding/on_boarding_page_widget.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingScreen extends StatelessWidget {
-  const OnBoardingScreen({super.key});
+  OnBoardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    final pages = [
-      OnBoardingPageWidget(
-        model: OnBoardingModel(
-          image: tOnBoardingImage1,
-          title: tOnBoardingTitle1,
-          subTitle: tOnBoardingSubTitle1,
-          counterText: tOnBoardingCounter1,
-          bgColor: tOnBoardingPag1eColor,
-          height: size.height,
-        ),
-      ),
-      OnBoardingPageWidget(
-        model: OnBoardingModel(
-          image: tOnBoardingImage2,
-          title: tOnBoardingTitle2,
-          subTitle: tOnBoardingSubTitle2,
-          counterText: tOnBoardingCounter2,
-          bgColor: tOnBoardingPag2eColor,
-          height: size.height,
-        ),
-      ),
-      OnBoardingPageWidget(
-        model: OnBoardingModel(
-          image: tOnBoardingImage3,
-          title: tOnBoardingTitle3,
-          subTitle: tOnBoardingSubTitle3,
-          counterText: tOnBoardingCounter3,
-          bgColor: tOnBoardingPag3eColor,
-          height: size.height,
-        ),
-      ),
-      OnBoardingPageWidget(
-        model: OnBoardingModel(
-          image: tOnBoardingImage4,
-          title: tOnBoardingTitle4,
-          subTitle: tOnBoardingSubTitle4,
-          counterText: tOnBoardingCounter4,
-          bgColor: tOnBoardingPag4eColor,
-          height: size.height,
-        ),
-      ),
-    ];
+    final obcontroller = OnBoardingController();
     return Scaffold(
       body: Stack(
+        alignment: Alignment.center,
         children: [
-          LiquidSwipe(pages: pages),
+          LiquidSwipe(
+            liquidController: obcontroller.controller,
+            onPageChangeCallback: obcontroller.onPageChangeCallback,
+            pages: obcontroller.pages,
+            slideIconWidget: const Icon(Icons.arrow_back_ios),
+            enableSideReveal: true,
+          ),
+          Positioned(
+            bottom: 60.0,
+            child: OutlinedButton(
+              onPressed: () => obcontroller.animateToNextSlide(),
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.white,
+                side: const BorderSide(color: Colors.black38),
+                shape: const CircleBorder(),
+                padding: const EdgeInsets.all(20),
+              ),
+              child: Container(
+                padding: const EdgeInsets.all(20),
+                decoration: const BoxDecoration(
+                  color: Color(0xff272727),
+                  shape: BoxShape.circle,
+                ),
+                child: const Icon(Icons.arrow_forward_ios),
+              ),
+            ),
+          ),
+          Positioned(
+            top: 50,
+            right: 20,
+            child: TextButton(
+              onPressed: () {
+                obcontroller.skip();
+              },
+              child: const Text(
+                "Skip",
+                style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w900),
+              ),
+            ),
+          ),
+          Obx(
+            () => Positioned(
+              bottom: 10,
+              child: AnimatedSmoothIndicator(
+                effect: const WormEffect(
+                  activeDotColor: Color(0xff272727),
+                  dotHeight: 5.0,
+                ),
+                activeIndex: obcontroller.currentPage.value,
+                count: 4,
+              ),
+            ),
+          ),
         ],
       ),
     );

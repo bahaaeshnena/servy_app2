@@ -9,3 +9,6 @@ const tOnBoardingPag1eColor = Colors.white;
 const tOnBoardingPag2eColor = Color(0xfffddcdf);
 const tOnBoardingPag3eColor = Color(0xffffdcbd);
 const tOnBoardingPag4eColor = Color(0xff98ABEE);
+// const tOnBoardingPag2eColor = Color(0xffCFF5E7);
+// const tOnBoardingPag3eColor = Color(0xffA0E4CB);
+// const tOnBoardingPag4eColor = Color(0xff59C1BD);
