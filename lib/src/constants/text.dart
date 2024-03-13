@@ -1,6 +1,6 @@
 //splash screen text
 
-//On Boarding Text
+//--On Boarding Text--
 
 const String tOnBoardingTitle1 = "Seamless Service Publication";
 const String tOnBoardingTitle2 = "Tailored Transactions";
@@ -20,3 +20,9 @@ const String tOnBoardingCounter1 = "1/4";
 const String tOnBoardingCounter2 = "2/4";
 const String tOnBoardingCounter3 = "3/4";
 const String tOnBoardingCounter4 = "4/4";
+
+//--On Boarding Text--
+
+const String tWelcomeTitle = "Build Servy Apps";
+const String tWelcomeSubTitle =
+    "Let's put your creatitvity on the development highway , craft apps that everyone love";

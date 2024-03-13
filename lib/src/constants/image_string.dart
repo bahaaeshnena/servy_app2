@@ -14,3 +14,7 @@ const String tOnBoardingImage3 =
     'assets/images/on_boarding_images/Fostering_Social_Bonds-removebg-preview.png';
 const String tOnBoardingImage4 =
     'assets/images/on_boarding_images/Unleash_Your_Creativity-removebg-preview.png';
+
+//--Welcome Screen Images--
+
+const String tWelcomeScreenImage = 'assets/images/welcome_images/welcome.png';
