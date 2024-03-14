@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 //theme color applications
 const kPrimaryColorGreen = Color(0xff2AAAB1);
-const kSecondaryColor = Color(0xFF272727);
 const kPrimaryColorBlue = Color(0xff4D98C1);
+const kSecondaryColor = Color(0xFF272727);
 
 const kWhiteColor = Colors.white;
 const kDarkColor = Color(0xFF000000);

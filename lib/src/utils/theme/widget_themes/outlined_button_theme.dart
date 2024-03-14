@@ -9,7 +9,7 @@ class ToutLineButtonTheme {
 
   static final lightOutlineButtonTheme = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
-        shape: const RoundedRectangleBorder(),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
         foregroundColor: kSecondaryColor,
         side: const BorderSide(color: kSecondaryColor),
         padding: const EdgeInsets.symmetric(vertical: tButtonheight)),
@@ -19,7 +19,7 @@ class ToutLineButtonTheme {
 
   static final darkOutlineButtonTheme = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
-        shape: const RoundedRectangleBorder(),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
         foregroundColor: kWhiteColor,
         side: const BorderSide(color: kWhiteColor),
         padding: const EdgeInsets.symmetric(vertical: tButtonheight)),

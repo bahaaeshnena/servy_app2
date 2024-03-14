@@ -30,7 +30,7 @@ class OnBoardingPageWidget extends StatelessWidget {
                   fontFamily: 'Montserrat-SemiBold',
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Text(

@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:liquid_swipe/PageHelpers/LiquidController.dart';
 import 'package:servy_app2/src/constants/colors.dart';
 import 'package:servy_app2/src/constants/image_string.dart';

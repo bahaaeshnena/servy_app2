@@ -26,3 +26,10 @@ const String tOnBoardingCounter4 = "4/4";
 const String tWelcomeTitle = "Build Servy Apps";
 const String tWelcomeSubTitle =
     "Let's put your creatitvity on the development highway , craft apps that everyone love";
+
+//--login Screen Text
+
+const String tLoginTitle = "Welcome Back";
+const String tLoginSubTitle = "Make it work, make it right, make it fast";
+const String tRemembarMe = "Remembar Me?";
+const String tAlreadyHaveAnAccount = "Already have an Account?";

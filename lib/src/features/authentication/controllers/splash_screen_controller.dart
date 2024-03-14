@@ -13,6 +13,6 @@ class SplashScreenController extends GetxController {
 
     await Future.delayed(const Duration(milliseconds: 5000));
 
-    Get.to(WelcomeScreen());
+    Get.to(() => const WelcomeScreen());
   }
 }

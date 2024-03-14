@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/get_core.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:servy_app2/src/constants/colors.dart';
 import 'package:servy_app2/src/constants/image_string.dart';
 import 'package:servy_app2/src/constants/text.dart';
+import 'package:servy_app2/src/features/authentication/screens/login/login_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -45,7 +48,7 @@ class WelcomeScreen extends StatelessWidget {
                 children: [
                   Expanded(
                     child: OutlinedButton(
-                        onPressed: () {},
+                        onPressed: () => Get.to(() => const LoginScreen()),
                         child: Text(
                           "Login".toUpperCase(),
                         )),
