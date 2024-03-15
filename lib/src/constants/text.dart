@@ -52,3 +52,9 @@ const String tForgetPhoneSubTitle =
 
 const String tForgetMailSubTitle =
     "Enter your registered E-Mail  to receive OTP";
+
+//--Forget Password via E-mail -Text
+
+const String tOtpTitle = "CO\nDE";
+const String tOtpSubTitle = "VERIFICATION";
+const String tOtpMessage = "Enter the verification code sent at ";
