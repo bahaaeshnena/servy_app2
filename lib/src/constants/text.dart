@@ -58,3 +58,9 @@ const String tForgetMailSubTitle =
 const String tOtpTitle = "CO\nDE";
 const String tOtpSubTitle = "VERIFICATION";
 const String tOtpMessage = "Enter the verification code sent at ";
+
+//--Sign Up Screen Text
+
+const String tSignUpTitle = "Get On Board!";
+const String tSignUpSubTitle =
+    "Create your profile to start your Journey with us...";

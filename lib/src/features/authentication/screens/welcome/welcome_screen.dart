@@ -5,6 +5,7 @@ import 'package:servy_app2/src/constants/colors.dart';
 import 'package:servy_app2/src/constants/image_string.dart';
 import 'package:servy_app2/src/constants/text.dart';
 import 'package:servy_app2/src/features/authentication/screens/login/login_screen.dart';
+import 'package:servy_app2/src/features/authentication/screens/signup/signup_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -56,7 +57,7 @@ class WelcomeScreen extends StatelessWidget {
                   const SizedBox(width: 10.0),
                   Expanded(
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () => Get.to(() => const SignUpScreen()),
                       child: Text(
                         "Signup".toUpperCase(),
                       ),

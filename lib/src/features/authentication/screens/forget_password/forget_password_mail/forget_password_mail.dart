@@ -4,7 +4,7 @@ import 'package:servy_app2/src/constants/image_string.dart';
 import 'package:servy_app2/src/constants/sizes.dart';
 import 'package:servy_app2/src/constants/text.dart';
 import 'package:servy_app2/src/features/authentication/screens/forget_password/forget_password_otp/otp_screen.dart';
-import 'package:servy_app2/src/features/authentication/screens/login/form_header_widget.dart';
+import 'package:servy_app2/src/widgets/form/form_header_widget.dart';
 
 class ForgetPasswordMailScreen extends StatelessWidget {
   const ForgetPasswordMailScreen({super.key});
@@ -45,7 +45,7 @@ class ForgetPasswordMailScreen extends StatelessWidget {
                       width: double.infinity,
                       child: ElevatedButton(
                           onPressed: () {
-                            Get.to(() => OTPScreen());
+                            Get.to(() => const OTPScreen());
                           },
                           child: const Text("Next"))),
                 ],

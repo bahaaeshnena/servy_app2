@@ -47,6 +47,7 @@ class OTPScreen extends StatelessWidget {
               filled: true,
               fieldWidth: 50,
               onSubmit: (code) {
+                // ignore: avoid_print
                 print("OTP is => $code");
               },
             ),

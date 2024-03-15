@@ -18,7 +18,7 @@ class LoginForm extends StatelessWidget {
               decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.person_outline_outlined),
                   labelText: "Email",
-                  hintText: "Email",
+                  // hintText: "Email",
                   border: OutlineInputBorder()),
             ),
             const SizedBox(
@@ -28,7 +28,7 @@ class LoginForm extends StatelessWidget {
               decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.fingerprint),
                   labelText: "Password",
-                  hintText: "Password",
+                  // hintText: "Password",
                   border: OutlineInputBorder(),
                   suffixIcon: IconButton(
                     onPressed: null,
