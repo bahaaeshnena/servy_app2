@@ -33,3 +33,22 @@ const String tLoginTitle = "Welcome Back";
 const String tLoginSubTitle = "Make it work, make it right, make it fast";
 const String tRemembarMe = "Remembar Me?";
 const String tAlreadyHaveAnAccount = "Already have an Account?";
+
+//--Forget Password Text
+
+const String tForgetPasswordTitle = "Make Selection";
+
+const String tForgetPasswordSubTitle =
+    "Select one of the option given below to reset your password";
+
+const String tRestViaEMail = "Rest via E-Mail Verification";
+const String tRestViaPhone = "Rest via Phone Verification";
+
+//--Forget Password  via phone -Text
+const String tForgetPhoneSubTitle =
+    "Enter your registered Phone No to receive OTP";
+
+//--Forget Password via E-mail -Text
+
+const String tForgetMailSubTitle =
+    "Enter your registered E-Mail  to receive OTP";
