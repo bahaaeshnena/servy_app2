@@ -19,54 +19,52 @@ class WelcomeScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: isDarkMode ? kSecondaryColor : kPrimaryColorGreen,
-      body: Container(
-        child: Padding(
-          padding: const EdgeInsets.all(30),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Image.asset(
-                tWelcomeScreenImage,
-                height: height * 0.5,
+      body: Padding(
+        padding: const EdgeInsets.all(30),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Image.asset(
+              tWelcomeScreenImage,
+              height: height * 0.5,
+            ),
+            const Text(
+              tWelcomeTitle,
+              style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.w900,
+                fontFamily: 'Montserrat-SemiBold',
               ),
-              const Text(
-                tWelcomeTitle,
-                style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.w900,
-                  fontFamily: 'Montserrat-SemiBold',
-                ),
+            ),
+            const Text(
+              tWelcomeSubTitle,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontFamily: 'Poppins',
+                fontSize: 17,
               ),
-              const Text(
-                tWelcomeSubTitle,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontFamily: 'Poppins',
-                  fontSize: 17,
-                ),
-              ),
-              Row(
-                children: [
-                  Expanded(
-                    child: OutlinedButton(
-                        onPressed: () => Get.to(() => const LoginScreen()),
-                        child: Text(
-                          "Login".toUpperCase(),
-                        )),
-                  ),
-                  const SizedBox(width: 10.0),
-                  Expanded(
-                    child: ElevatedButton(
-                      onPressed: () => Get.to(() => const SignUpScreen()),
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: OutlinedButton(
+                      onPressed: () => Get.to(() => const LoginScreen()),
                       child: Text(
-                        "Signup".toUpperCase(),
-                      ),
+                        "Login".toUpperCase(),
+                      )),
+                ),
+                const SizedBox(width: 10.0),
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: () => Get.to(() => const SignUpScreen()),
+                    child: Text(
+                      "Signup".toUpperCase(),
                     ),
                   ),
-                ],
-              )
-            ],
-          ),
+                ),
+              ],
+            )
+          ],
         ),
       ),
     );

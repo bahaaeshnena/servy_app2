@@ -5,11 +5,12 @@ import 'package:servy_app2/src/constants/image_string.dart';
 import 'package:servy_app2/src/constants/text.dart';
 import 'package:servy_app2/src/features/authentication/models/model_on_boarding.dart';
 import 'package:servy_app2/src/features/authentication/screens/on_boarding/on_boarding_page_widget.dart';
+import 'package:servy_app2/src/features/authentication/screens/welcome/welcome_screen.dart';
 
 class OnBoardingController extends GetxController {
   final controller = LiquidController();
 
-  RxInt currentPage = 0.obs;
+  Rx<int> currentPage = 0.obs;
 
   final pages = [
     OnBoardingPageWidget(
@@ -50,7 +51,9 @@ class OnBoardingController extends GetxController {
     ),
   ];
 
-  skip() => controller.jumpToPage(page: 3);
+  // skip() => controller.jumpToPage(page: 3);
+
+  skip() => Get.to(() => const WelcomeScreen());
   animateToNextSlide() {
     int nextPage = controller.currentPage + 1;
     controller.animateToPage(page: nextPage);

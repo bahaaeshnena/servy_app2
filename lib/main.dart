@@ -1,20 +1,25 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/get_navigation.dart';
-import 'package:servy_app2/firebase_options.dart';
-import 'package:servy_app2/src/features/authentication/screens/splash_screen/splash_screens.dart';
+import 'package:get/get.dart';
+import 'package:servy_app2/src/features/authentication/screens/on_boarding/on_boarding_screen.dart';
+import 'package:servy_app2/src/features/authentication/screens/signup/signup_screen.dart';
+import 'package:servy_app2/src/features/authentication/screens/welcome/welcome_screen.dart';
+// import 'package:servy_app2/firebase_options.dart';
+import 'firebase_options.dart';
+import 'package:servy_app2/src/respository/authentication_respository/authentication_respository.dart';
 import 'package:servy_app2/src/utils/theme/theme.dart';
 
-void main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
+  Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const Servy_app());
+  //.then((FirebaseApp value) => Get.put(AuthenticationRespository()))
+  runApp(const ServyApp());
 }
 
-class Servy_app extends StatelessWidget {
-  const Servy_app({super.key});
+class ServyApp extends StatelessWidget {
+  const ServyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +29,7 @@ class Servy_app extends StatelessWidget {
       darkTheme: TApptheme.darkTheme,
       defaultTransition: Transition.rightToLeftWithFade,
       transitionDuration: const Duration(milliseconds: 500),
-      home: SplshScreen(),
+      home: const OnBoardingScreen(),
     );
   }
 }

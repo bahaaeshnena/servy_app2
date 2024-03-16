@@ -5,6 +5,7 @@ import 'package:servy_app2/src/constants/sizes.dart';
 import 'package:servy_app2/src/constants/text.dart';
 import 'package:servy_app2/src/features/authentication/screens/forget_password/forget_password_mail/forget_password_mail.dart';
 import 'package:servy_app2/src/features/authentication/screens/forget_password/forget_password_options/forget_password_btn_widget.dart';
+import 'package:servy_app2/src/features/authentication/screens/forget_password/forget_password_otp/otp_screen.dart';
 
 class ForgetPasswordScreen {
   static Future<dynamic> buildShowModelBottomSheet(BuildContext context) {
@@ -50,7 +51,7 @@ class ForgetPasswordScreen {
               subTitle: tRestViaPhone,
               onTap: () {
                 Navigator.pop(context);
-                Get.to(() => const ForgetPasswordMailScreen());
+                Get.to(() => const OTPScreen());
               },
             ),
           ],

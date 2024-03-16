@@ -56,7 +56,7 @@ class SignUpScreen extends StatelessWidget {
                                   color: Colors.black,
                                   fontWeight: FontWeight.w400),
                             ),
-                            TextSpan(text: "Login"),
+                            TextSpan(text: " Login"),
                           ],
                         ),
                       ),
