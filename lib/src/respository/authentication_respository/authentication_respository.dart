@@ -35,9 +35,11 @@ class AuthenticationRespository extends GetxController {
           : Get.to(() => const WelcomeScreen());
     } on FirebaseAuthException catch (e) {
       final ex = SignUpEmailPasswordFailure.code(e.code);
+      // ignore: avoid_print
       print('FIREBASE AUTH EXCEPTION -${ex.message}');
     } catch (_) {
       const ex = SignUpEmailPasswordFailure();
+      // ignore: avoid_print
       print('FIREBASE AUTH EXCEPTION -${ex.message}');
     }
   }
@@ -45,6 +47,7 @@ class AuthenticationRespository extends GetxController {
   Future<void> loginWithEmailAndPassword(String email, String password) async {
     try {
       await _auth.signInWithEmailAndPassword(email: email, password: password);
+      // ignore: unused_catch_clause, empty_catches
     } on FirebaseAuthException catch (e) {
     } catch (_) {}
   }

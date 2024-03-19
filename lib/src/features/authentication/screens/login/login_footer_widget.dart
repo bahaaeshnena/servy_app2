@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:servy_app2/src/constants/image_string.dart';
+import 'package:servy_app2/src/features/authentication/screens/signup/signup_screen.dart';
 
 class LoginFooterWidget extends StatelessWidget {
   const LoginFooterWidget({
@@ -28,7 +30,7 @@ class LoginFooterWidget extends StatelessWidget {
           height: 10,
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () => Get.to(() => const SignUpScreen()),
           child: const Text.rich(
             TextSpan(
               text: "Dont Have An Account?  ",

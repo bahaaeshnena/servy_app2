@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:servy_app2/src/features/authentication/controllers/login_controller.dart';
 import 'package:servy_app2/src/features/authentication/screens/forget_password/forget_password_options/forget_password_model_bottom_sheet.dart';
+import 'package:servy_app2/src/utils/theme/validators/validation.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({
@@ -8,13 +11,17 @@ class LoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(LogInController());
     return Form(
+      key: controller.loginFormKey,
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextFormField(
+              controller: controller.email,
+              validator: (value) => TValidator.validateEmail(value),
               decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.person_outline_outlined),
                   labelText: "Email",
@@ -25,6 +32,8 @@ class LoginForm extends StatelessWidget {
               height: 10,
             ),
             TextFormField(
+              controller: controller.password,
+              validator: (value) => TValidator.validatePassword(value),
               decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.fingerprint),
                   labelText: "Password",
@@ -50,7 +59,13 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  if (controller.loginFormKey.currentState!.validate()) {
+                    LogInController.instance.loginUser(
+                        controller.email.text.trim(),
+                        controller.password.text.trim());
+                  }
+                },
                 child: Text("Login".toUpperCase()),
               ),
             )

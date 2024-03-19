@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:servy_app2/src/constants/sizes.dart';
 import 'package:servy_app2/src/features/authentication/controllers/signup_controller.dart';
 import 'package:servy_app2/src/utils/theme/validators/validation.dart';
@@ -81,6 +80,45 @@ class SignUpFormWidget extends StatelessWidget {
                 border: OutlineInputBorder(),
               ),
             ),
+            const SizedBox(
+              height: 10,
+            ),
+            TextFormField(
+              // validator: (value) => TValidator.validatePassword(value),
+              // controller: controller.password,
+              obscureText: true,
+              decoration: const InputDecoration(
+                label: Text("Select Skills"),
+                prefixIcon: Icon(
+                  Icons.list,
+                ),
+                border: OutlineInputBorder(),
+              ),
+            ),
+            // AppTextField(
+            //   dataList: [
+            //     SelectedListItem(name: "Programming"),
+            //     SelectedListItem(name: "Website Programmer"),
+            //     SelectedListItem(name: "Android Application Programmer "),
+            //     SelectedListItem(name: "IOS Application Programmer"),
+            //     SelectedListItem(name: "Programming Games"),
+            //     SelectedListItem(name: "Logo Design"),
+            //     SelectedListItem(name: "Video Design"),
+            //     SelectedListItem(name: "UI & UX Design"),
+            //     SelectedListItem(name: "Translator"),
+            //     SelectedListItem(name: "PowerPoint Design"),
+            //     SelectedListItem(name: "Games Design"),
+            //     SelectedListItem(name: "Design Decorations"),
+            //     SelectedListItem(name: "Paint"),
+            //     SelectedListItem(name: "Smith"),
+            //     SelectedListItem(name: "Welding"),
+            //     SelectedListItem(name: "Maintenance"),
+            //   ],
+            //   // textEditingController: work,
+            //   title: "Select Work",
+            //   hint: 'Work',
+            //   isWorkSelected: true,
+            // ),
             const SizedBox(
               height: 10,
             ),
